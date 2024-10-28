@@ -1,0 +1,28 @@
+/* Card.css */
+
+.card-container {
+    margin: 20px;
+}
+
+.card {
+    max-height: 400px; /* Set a maximum height for the card */
+}
+
+.img-fixed {
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* This ensures the image covers the space without distortion */
+}
+
+/* Style for smaller select elements */
+select {
+    height: 35px; /* Adjust the height */
+    padding: 5px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+}
+
+/* Optional: Add some styling for the card body */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title, description, and controls */
+}
