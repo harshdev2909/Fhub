@@ -55,7 +55,7 @@ function Card() {
                             </select>
 
                             <select
-                                className='m-2 h-10 bg-success rounded'
+                                className='m-2 h-10 bg-success rounded '
                                 onChange={(e) => handleSelectChange(product._id, e.target.value)}
                             >
                                 <option value="">Select Size</option>
