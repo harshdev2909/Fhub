@@ -6,11 +6,11 @@ import { Carousal } from '../components/Carousal'
 
 export const Home = () => {
   return (
-    <div>
+    <>
       <div><Navbar /></div>
       <div><Carousal/></div>
-      <div className='m-3'><Card/></div>
+      <Card/>
       <div><Footer/></div>
-    </div>
+    </>
   )
 }
