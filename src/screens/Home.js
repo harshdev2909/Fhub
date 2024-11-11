@@ -7,11 +7,11 @@ import CartContextProvider from '../context/CartContextProvider'
 
 export const Home = () => {
   return (
-    <CartContextProvider>
+    <>
       <Navbar/>
       <Carousal/>
       <Card/>
       <Footer/>
-    </CartContextProvider>
+    </>
   )
 }
