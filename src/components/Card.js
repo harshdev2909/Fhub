@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Card.css'; // Import your custom CSS file
+import CartContext from '../context/CartContext';
 
 function Card() {
     const [data, setData] = useState([]);
@@ -31,6 +32,10 @@ function Card() {
             [productId]: value,
         }));
     };
+   
+    const handleAddToCart = () =>{
+
+    }
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;

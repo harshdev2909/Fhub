@@ -3,14 +3,15 @@ import { Navbar } from '../components/Navbar'
 import Card from '../components/Card'
 import { Footer } from '../components/Footer'
 import { Carousal } from '../components/Carousal'
+import CartContextProvider from '../context/CartContextProvider'
 
 export const Home = () => {
   return (
-    <>
-      <div><Navbar /></div>
-      <div><Carousal/></div>
+    <CartContextProvider>
+      <Navbar/>
+      <Carousal/>
       <Card/>
-      <div><Footer/></div>
-    </>
+      <Footer/>
+    </CartContextProvider>
   )
 }
