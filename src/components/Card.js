@@ -1,19 +1,19 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import './Card.css'; // Import your custom CSS file
+import './Card.css';
 import CartContext from '../context/CartContext';
-
+import productData from '../foodData2';
 function Card() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [selectedOptions, setSelectedOptions] = useState({}); // Track selected options
-
+console.log(productData)
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:5000/api/products'); // Adjust this URL as necessary
-                console.log(response.data); // Log the data directly
+                // console.log(response.data); // Log the data directly
                 setData(response.data);
             } catch (err) {
                 setError(err);
@@ -42,7 +42,7 @@ function Card() {
 
     return (
         <div className="card-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8 p-8">
-    {data.map(product => (
+    {productData.map(product => (
         <div key={product._id} className="card bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105">
             <img src={product.img} className="w-full h-56 object-cover rounded-t-lg" alt={product.name} />
             <div className="card-body p-5">

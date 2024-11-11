@@ -1,4 +1,4 @@
-[
+const productData =[
     {
         "CategoryName": "Biryani/Rice",
         "name": "Chicken Fried Rice",
@@ -146,3 +146,5 @@
         "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
     }
 ]
+
+export default productData
